@@ -1,0 +1,31 @@
+---
+- name: Bootstrap cloud6
+  gather_facts: false
+  hosts: localhost
+  vars:
+    config_file: "{{ lookup('file', 'clouds.yaml') | from_yaml }}"
+  roles:
+    - role: openstack_aggregate
+      tags:
+        - aggregate
+    - role: openstack_flavor
+      tags:
+        - flavor
+    - role: openstack_network
+      tags:
+        - network
+    - role: openstack_domain
+      tags:
+        - domain
+    - role: openstack_project
+      tags:
+        - project
+    - role: openstack_group
+      tags:
+        - group
+    - role: openstack_user
+      tags:
+        - user
+    - role: openstack_role
+      tags:
+        - role

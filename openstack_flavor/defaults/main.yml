@@ -1,0 +1,54 @@
+---
+# defaults file for openstack_flavor
+openstack_flavors:
+  - name: general.small
+    cloud: cloud
+    state: present
+    description: "Small general flavor"
+    ram: 2048
+    vcpus: 1
+    disk: 20
+    ephemeral: 0
+    extra_specs:
+      "aggregate_instance_extra_specs:type": "general"
+  - name: general.medium
+    cloud: cloud
+    state: present
+    description: "Medium general flavor"
+    ram: 4096
+    vcpus: 2
+    disk: 20
+    ephemeral: 0
+    extra_specs:
+      "aggregate_instance_extra_specs:type": "general"
+  - name: general.large
+    cloud: cloud
+    state: present
+    description: "Large general flavor"
+    ram: 8192
+    vcpus: 4
+    disk: 20
+    ephemeral: 0
+    extra_specs:
+      "aggregate_instance_extra_specs:type": "general"
+  - name: general.xlarge
+    cloud: cloud
+    state: present
+    description: "Extra Large general flavor"
+    ram: 16384
+    vcpus: 8
+    disk: 20
+    ephemeral: 0
+    extra_specs:
+      "aggregate_instance_extra_specs:type": "general"
+  - name: sgx.xlarge
+    cloud: cloud
+    state: absent
+    description: "Extra Large sgx flavor"
+    ram: 8192
+    vcpus: 4
+    disk: 20
+    ephemeral: 0
+    extra_specs:
+      "aggregate_instance_extra_specs:type": "sgx"
+ 

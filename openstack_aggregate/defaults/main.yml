@@ -1,0 +1,22 @@
+---
+# defaults file for openstack_aggregate
+openstack_aggregates:
+  - name: general
+    cloud: cloud
+    state: present
+    availability_zone: nova
+    purge_hosts: false
+    hosts:
+      - host1
+      - host1
+    metadata:
+      type: general
+  - name: sgx
+    cloud: cloud
+    state: absent
+    availability_zone: nova
+    purge_hosts: false
+    hosts:
+      - host3
+    metadata:
+      type: sgx

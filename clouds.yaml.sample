@@ -1,0 +1,12 @@
+clouds:
+  cloud:
+    auth:
+      auth_url: https://cloud.example:5000
+      project_name: admin
+      username: 
+      password: ''
+      project_domain_id: default
+      user_domain_id: default
+    region_name: RegionOne
+    identity_api_version: '3'
+

@@ -1,0 +1,11 @@
+---
+# tasks file for openstack_aggregate
+- name: Create aggregate
+  openstack.cloud.host_aggregate:
+    #cloud: "{{ item.cloud }}"
+    state: "{{ item.state }}"
+    name: "{{ item.name }}"
+    purge_hosts: "{{ item.purge_hosts }}"
+    hosts: "{{ item.hosts }}"
+    metadata: "{{ item.metadata }}"
+  loop: "{{ openstack_aggregates}}"
