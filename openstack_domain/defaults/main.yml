@@ -1,7 +1,0 @@
----
-# defaults file for openstack_domain
-openstack_domains:
-  - name: Ops
-    description: Ops Domain
-    cloud: cloud
-    state: present

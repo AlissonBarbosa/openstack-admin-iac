@@ -1,9 +1,0 @@
----
-# tasks file for openstack_domain
-- name: Create domains
-  openstack.cloud.identity_domain:
-    #cloud: "{{ item.cloud }}"
-    state: "{{ item.state }}"
-    name: "{{ item.name }}"
-    description: "{{ item.description }}"
-  loop: "{{ openstack_domains}}"
